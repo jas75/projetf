@@ -1,0 +1,25 @@
+{
+  "name": "projetf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jas75/projetf.git"
+  },
+  "author": "Jason Azoulay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jas75/projetf/issues"
+  },
+  "homepage": "https://github.com/jas75/projetf#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.3"
+  }
+}
