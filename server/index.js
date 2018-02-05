@@ -3,6 +3,22 @@ const express = require('express');
 const app = express();
 const router = express.Router();
 
+// Config
+const config = require('./config/database/database');
+
+// Database
+const mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
+
+mongoose.connect(config.uri, function(err){
+   if(err){
+       console.log("Couldn't connect to database: ", err);
+   }
+   else{
+       console.log("Connected to database: " + config.db);
+   }
+});
+
 // Environement
 const port = process.env.PORT || 8080;
 
@@ -11,10 +27,10 @@ const http = require('http')
 const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
-const server = http.createServer(app)
+const server = http.createServer(app);
 
 
-// Activate middleware
+// Enable middleware
 app.use(cors({
     origin:'http://localhost:4200',
     credentials:true
